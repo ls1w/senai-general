@@ -1,0 +1,6 @@
+ALGORÍTMO
+
+01 - Solicitar a cotação do real atual
+02 - Solicitar a quantidade de reais a converter
+03 - Multiplicar a cotação do real pela quantidade de reais
+04 - Mostrar ao usuário

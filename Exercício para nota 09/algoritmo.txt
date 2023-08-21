@@ -1,0 +1,8 @@
+ALGORÍTMO
+
+01 - Solicitar o valor A
+02 - Solicitar o valor B
+03 - Somar eles
+04 - Subtrair A pelo B
+05 - Multiplicar A pelo B
+06 - Dividir A pelo B

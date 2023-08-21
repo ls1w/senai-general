@@ -1,0 +1,7 @@
+ALGORÍTMO
+
+1 - Solicitar valor
+2 - Solicitar taxa
+3 - Solicitar tempo
+4 - Calcular prestação=valor+(valor*(taxa/100)*tempo)
+5 - Exibir o resultado

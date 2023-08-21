@@ -1,0 +1,9 @@
+ALGORÍTMO
+
+01 - Solicitar entrada da velocidade
+02 - Solicitar entrada do tempo
+03 - Solicitar o consumo de combustível por km
+04 - Fazer o calculo da distância (DISTÂNCIA=TEMPO*VELOCIDADE)
+05 - Fazer o calculo da quantidade de litros usados (LITROS_USADOS=DISTÂNCIA/12)
+06 - Mostrar valor da velocidade média, tempo gasto na viagem, à distância 
+percorrida e a quantidade de litros utilizada na viagem.

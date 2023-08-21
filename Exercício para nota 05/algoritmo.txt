@@ -1,0 +1,19 @@
+ALGORÍTMO
+
+01 - Solicitar valor A
+02 - Solicitar valor B
+03 - Solicitar valor C
+04 - Solicitar valor D
+05 - Somar A com B
+06 - Somar A com C
+07 - Somar A com D
+08 - Somar B com C
+09 - Somar B com D
+10 - Somar C com D
+11 - Multiplicar A com B
+12 - Multiplicar A com C 
+13 - Multiplicar A com D
+14 - Multiplicar B com C 
+15 - Multiplicar B com D
+16 - Multiplicar C com D
+17 - Mostrar os resultados

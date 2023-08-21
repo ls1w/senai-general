@@ -1,0 +1,5 @@
+Algorítmo
+
+1 – Solicitar a entrada de valor em graus Celsius
+2 – Calcular a conversão de graus Celsius para Fahrenheit
+3 – Exibir o resultado de conversão

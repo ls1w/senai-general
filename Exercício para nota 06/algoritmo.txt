@@ -1,0 +1,6 @@
+ALGORÍTMO
+
+01 - Solicitar a cotação do dolar atual
+02 - Solicitar a quantidade de dolares a converter
+03 - Multiplicar a cotação do dolar pela quantidade de dolares
+04 - Mostrar ao usuário

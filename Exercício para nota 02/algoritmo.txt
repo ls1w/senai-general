@@ -1,0 +1,6 @@
+Algoritmo
+
+1 - Solicitar a entrada do raio
+2 - Solicitar a entrada da altura
+3 - Calcular o volume da lata pela formula volume=3.14159*R^2*altura
+4 - Exibir o volume na tela
