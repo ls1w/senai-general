@@ -13,6 +13,8 @@ resultado = ''
 # upper() - converte o conteúdo de uma string para MAIUSCULO
 # lower() - converte o conteúdo de uma string para minusculo
 
+
+# Validação dos dados colocados
 if(not(valor1.isnumeric()) or not(valor2.isnumeric())):
     print('ERRO: Não é possível calcular se não digitar valores válidos')
 else:
