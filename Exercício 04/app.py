@@ -4,7 +4,6 @@
 # Autor: Lucas
 # Versão: 1.0
 #***************************************************************************************************************************************
-import math
 # Título
 print('')
 print('Calculadora em python')
@@ -22,18 +21,15 @@ resultado = ''
 # verificando validade dos valores digitados
 
 if(not(entrada_a.isnumeric()) or not(entrada_b.isnumeric())): # Se a ou b for vazio, siga por aqui
-    if(entrada_a == ''):
-        print('ERROR: Não foi digitado nenhum valor válido na primeira entrada, por favor digite.')
-    else:
-        print('ERRO: Não foi digitado nenhum valor válido na segunda entrada, por favor digite.')
+    print('ERROR: Não foi digitado nenhum valor válido na entrada, por favor digite corretamente.')
 else: # Se a ou b não for vazio, siga por aqui
     if(operacao.lower != 'a' and operacao.lower != 'm' and operacao.lower != 'd' and operacao.lower != 's'): 
-        print('ERROR: Não foi digitada uma operação válida, por favor digite.')
+        print('ERROR: Não foi digitada uma operação válida, por favor digite corretamente.')
     else: # Fim da maioria da maioria das validações
         valor_a = float(entrada_a.replace(',','.'))
         valor_b = float(entrada_b.replace(',','.'))
         if(operacao.lower == 'a' or operacao.lower == 's'): # se for adição ou subtração, siga por aqui
-            if(operacao == 'a'): 
+            if(operacao.lower == 'a'): 
                 resultado = valor_a + valor_b
             else: 
                 resultado = valor_a - valor_b
