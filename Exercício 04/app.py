@@ -27,18 +27,18 @@ if(not(entrada_a.isnumeric()) or not(entrada_b.isnumeric())): # Se a ou b for va
     else:
         print('ERRO: Não foi digitado nenhum valor válido na segunda entrada, por favor digite.')
 else: # Se a ou b não for vazio, siga por aqui
-    if(operacao != 'a' and operacao != 'm' and operacao != 'd' and operacao != 's'): 
+    if(operacao.lower != 'a' and operacao.lower != 'm' and operacao.lower != 'd' and operacao.lower != 's'): 
         print('ERROR: Não foi digitada uma operação válida, por favor digite.')
     else: # Fim da maioria da maioria das validações
         valor_a = float(entrada_a.replace(',','.'))
         valor_b = float(entrada_b.replace(',','.'))
-        if(operacao == 'a' or operacao == 's'): # se for adição ou subtração, siga por aqui
+        if(operacao.lower == 'a' or operacao.lower == 's'): # se for adição ou subtração, siga por aqui
             if(operacao == 'a'): 
                 resultado = valor_a + valor_b
             else: 
                 resultado = valor_a - valor_b
         else: # se não for nem adição, nem subtração então siga por aqui
-            if(operacao == 'm'):
+            if(operacao.lower == 'm'):
                 resultado = valor_a * valor_b
             else:
                 if(valor_b != 0 and valor_a != 0): # Se nenhum valor digitado for 0, faça isso
