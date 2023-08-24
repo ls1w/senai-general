@@ -4,23 +4,27 @@
 # Autor: Lucas
 # Versão: 1.0
 #***************************************************************************************************************************************
+import math
 # Título
-print('Calculador em python')
+print('')
+print('Calculadora em python')
+print('')
 
 
 # entrada
 entrada_a = input('Digite o primeiro número: ')
-operacao = input('Digite em minusculo a primeira letra da operação desejada, a(dição), m(ultiplicação), d(ivisão), s(ubtração): ')
+operacao = input('Digite em minusculo a primeira letra da operação desejada: a(dição), m(ultiplicação), d(ivisão), s(ubtração): ')
 entrada_b = input('Digite o segundo número: ')
+
 
 
 # verificando validade dos valores digitados
 
-if(entrada_a == '' or entrada_b == ''): # Se a ou b for vazio, siga por aqui
+if(not(entrada_a.isnumeric()) or not(entrada_b.isnumeric())): # Se a ou b for vazio, siga por aqui
     if(entrada_a == ''):
-        print('ERROR: Não foi digitado nenhum valor na primeira entrada, por favor digite.')
+        print('ERROR: Não foi digitado nenhum valor válido na primeira entrada, por favor digite.')
     else:
-        print('ERRO: Não foi digitado nenhum valor na segunda entrada, por favor digite.')
+        print('ERRO: Não foi digitado nenhum valor válido na segunda entrada, por favor digite.')
 else: # Se a ou b não for vazio, siga por aqui
     if(operacao != 'a' and operacao != 'm' and operacao != 'd' and operacao != 's'): 
         print('ERROR: Não foi digitada uma operação válida, por favor digite.')
@@ -43,5 +47,7 @@ else: # Se a ou b não for vazio, siga por aqui
                     resultado = valor_a / valor_b
                     print(resultado)
                 else: # Se algum valor digitado for 0 numa divisão, faça isso (ultima validação)
+                    print('')
                     print('ERRO: Imagine que você tem 0 cookies e você divide eles igualmente entre 0 amigos. Quantos cookies cada pessoa ganha? Viu? Não faz sentido.')
                     print('O Cookie Monster está triste porque não há cookies, e você está triste porque não tem amigos.')
+                    print('')

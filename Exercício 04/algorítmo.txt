@@ -1,0 +1,11 @@
+- Sistema de uma calculador
+
+- 2 entradas de variáveis
+
+- 1 entrada de operação (soma, multiplicação, subtração, divisão)
+
+validações
+- valores vazios
+- somente aceitar as operações básicas de uma forma
+- não existe divisão por 0
+- tratamento da vírgula

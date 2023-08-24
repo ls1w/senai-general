@@ -1,0 +1,11 @@
+ALGORÍTMO
+
+01 - Solicitar entrada do nome do aluno
+02 - Solicitar primeira nota
+03 - Solicitar segunda nota
+04 - Solicitar terceira nota
+05 - Solicitar quarta do aluno
+06 - Calcular média do aluno
+07 - Se a média for maior ou igual a 7, mostrar aluno aprovado
+08 - Do contrário mostrar aluno reprovado
+09 - Exibir a média e o status do aluno
