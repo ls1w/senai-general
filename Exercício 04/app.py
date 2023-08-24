@@ -11,23 +11,23 @@ print('')
 
 
 # entrada
-entrada_a = input('Digite o primeiro número: ')
+valor_a = input('Digite o primeiro número: ')
 operacao = input('Digite em minusculo a primeira letra da operação desejada: a(dição), m(ultiplicação), d(ivisão), s(ubtração): ')
-entrada_b = input('Digite o segundo número: ')
+valor_b = input('Digite o segundo número: ')
 resultado = ''
 
 
 
 # verificando validade dos valores digitados
 
-if(not(entrada_a.isnumeric()) or not(entrada_b.isnumeric())): # Se a ou b for vazio, siga por aqui
+if(not(valor_a.isnumeric()) or not(valor_b.isnumeric())): # Se a ou b for vazio, siga por aqui
     print('ERROR: Não foi digitado nenhum valor válido na entrada, por favor digite corretamente.')
 else: # Se a ou b não for vazio, siga por aqui
     if(operacao.lower != 'a' and operacao.lower != 'm' and operacao.lower != 'd' and operacao.lower != 's'): 
         print('ERROR: Não foi digitada uma operação válida, por favor digite corretamente.')
     else: # Fim da maioria da maioria das validações
-        valor_a = float(entrada_a.replace(',','.'))
-        valor_b = float(entrada_b.replace(',','.'))
+        valor_a = float(valor_a.replace(',','.'))
+        valor_b = float(valor_b.replace(',','.'))
         if(operacao.lower == 'a' or operacao.lower == 's'): # se for adição ou subtração, siga por aqui
             if(operacao.lower == 'a'): 
                 resultado = valor_a + valor_b
