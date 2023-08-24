@@ -13,15 +13,21 @@ operacao = input('Escolha a operação a ser realizada [SOMAR | SUBTRAIR | MULTI
 # upper() - converte o conteúdo de uma string para MAIUSCULO
 # lower() - converte o conteúdo de uma string para minusculo
 
+valor1 = float(valor1)
+valor2 = float(valor2)
+
 if(operacao.upper() == 'SOMAR'):
     resultado = valor1 + valor2
-else:
-    if(operacao.upper() == 'SUBTRAIR'):
-        resultado = valor1 - valor2
+elif(operacao.upper() == 'SUBTRAIR'):
+    resultado = valor1 - valor2
+elif(operacao.upper() == 'MULTIPLICAR'):
+    resultado = valor1 * valor2
+elif(operacao.upper() == 'DIVIDIR'):
+    if(valor2 == 0):
+        print('ERRO: Não existe divisão por 0')
     else:
-        if(operacao.upper() == 'MULTIPLICAR'):
-            resultado = valor1 * valor2
-        else:
-            if(operacao.upper() == 'DIVIDIR'):
-                resultado = valor1 / valor2
-                
+        resultado = valor1 / valor2
+else:
+    print('ERRO: Operação escolhida inválida')
+
+print(resultado)
