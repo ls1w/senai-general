@@ -23,6 +23,8 @@ while True:
 if(numero % 2 == 0):
     print('')
     print('O número digitado foi par.')
+    print('')
 else:
     print('')
     print('O número digitado foi impar.')
+    print('')
