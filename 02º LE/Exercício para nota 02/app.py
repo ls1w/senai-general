@@ -9,8 +9,11 @@ print('')
 print('Mensagem feliz')
 print('')
 
+# entrada de dados
 nome = input('Digite o seu nome: ')
 sexo = input('Digite o seu sexo, f(feminino) ou m(masculino): ')
+
+# processamento e saída de dados
 
 if(sexo.lower() == 'f'):
     print('')
