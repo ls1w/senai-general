@@ -8,7 +8,6 @@
 print('')
 print('Calculando a diferença entre os valores')
 print('')
-erro = 0
 
 # entrada de dados
 while True:
