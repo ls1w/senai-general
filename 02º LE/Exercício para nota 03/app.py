@@ -12,7 +12,7 @@ print('')
 # entrada de dados
 while True:
     try:
-        numero = int(input('Digite o primeiro número inteiro: '))
+        numero = int(input('Digite o número inteiro: '))
     except ValueError:
         print('')
         print('ERRO: DIGITE SOMENTE VALORES VÁLIDOS!')
@@ -21,7 +21,7 @@ while True:
     else:
         break
 
-if(numero >= 0 or numero <= 9):
+if(numero >= 1 and numero <= 9):
     print('O valor está na faixa permitida')
 else:
     print('O valor está fora da faixa permitida')
