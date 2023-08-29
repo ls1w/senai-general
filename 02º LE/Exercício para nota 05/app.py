@@ -101,7 +101,7 @@ if(media >= 7):
     print('')
 elif(media < 4):
     print('')
-    print('Aluno',nome,'REPROVADO com média de',media)
+    print('Aluno',nome,'REPROVADO NO SEMESTRE com média de',media)
     print('')
 else:
     while True:
