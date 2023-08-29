@@ -37,7 +37,6 @@ while True:
     except ValueError:
         print('')
         print('ERRO: DIGITE SOMENTE VALORES VÁLIDOS!')
-        print('')
         continue
     else:
         if(codigo < 1 or codigo > 4):
