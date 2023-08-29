@@ -88,6 +88,9 @@ resultado = ''
 
 media = (nota1 + nota2 + nota3 + nota4)/4
 
+
+# saída de dados
+
 if(media >= 7):
     print('')
     print('Aluno',nome,'APROVADO com média de',media)
