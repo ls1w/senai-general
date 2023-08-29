@@ -9,6 +9,7 @@ print('')
 print('Determinando se um número é impar ou par')
 print('')
 
+# entrada de dados
 while True:
     try:
         numero = int(input('Digite o número inteiro: '))
@@ -19,6 +20,8 @@ while True:
         continue
     else:
         break
+
+# processamento e saída
 
 if(numero % 2 == 0):
     print('')
