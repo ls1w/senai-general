@@ -16,7 +16,8 @@ nome = input('Digite o nome do aluno: ')
 
 while True:
     try:
-        nota1 = int(input('Digite a primeira nota do aluno: '))
+        nota1 = input('Digite a primeira nota do aluno: ')
+        nota1 = float(nota1.replace(',','.'))
     except ValueError:
         print('')
         print('ERRO: DIGITE SOMENTE VALORES VÁLIDOS!')
@@ -33,7 +34,8 @@ while True:
 
 while True:
     try:
-        nota2 = int(input('Digite a segunda nota do aluno: '))
+        nota2 = input('Digite a segunda nota do aluno: ')
+        nota2 = float(nota2.replace(',','.'))
     except ValueError:
         print('')
         print('ERRO: DIGITE SOMENTE VALORES VÁLIDOS!')
@@ -50,7 +52,8 @@ while True:
 
 while True:
     try:
-        nota3 = int(input('Digite a terceira nota do aluno: '))
+        nota3 = input('Digite a terceira nota do aluno: ')
+        nota3 = float(nota3.replace(',','.'))
     except ValueError:
         print('')
         print('ERRO: DIGITE SOMENTE VALORES VÁLIDOS!')
@@ -67,7 +70,8 @@ while True:
 
 while True:
     try:
-        nota4 = int(input('Digite a quarta nota do aluno: '))
+        nota4 = input('Digite a quarta nota do aluno: ')
+        nota4 = float(nota4.replace(',','.'))
     except ValueError:
         print('')
         print('ERRO: DIGITE SOMENTE VALORES VÁLIDOS!')
@@ -102,7 +106,8 @@ elif(media < 4):
 else:
     while True:
         try:
-            nota_exame = int(input('Digite a nota do exame do aluno: '))
+            nota_exame = input('Digite a nota do exame do aluno: ')
+            nota_exame = float(nota_exame.replace(',','.'))
         except ValueError:
             print('')
             print('ERRO: DIGITE SOMENTE VALORES VÁLIDOS!')
