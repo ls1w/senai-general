@@ -23,6 +23,7 @@ while True:
 
 while True:
     try:
+        print('')
         valor2 = input('Digite o segundo valor: ')
         valor2 = float(valor2.replace(',','.'))
     except ValueError:
@@ -35,6 +36,7 @@ while True:
 
 while True:
     try:
+        print('')
         valor3 = input('Digite o terceiro valor: ')
         valor3 = float(valor3.replace(',','.'))
     except ValueError:
