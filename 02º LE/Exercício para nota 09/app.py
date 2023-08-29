@@ -29,7 +29,7 @@ while True:
     try:
         print('')
         print('Codigo 1 = À vista, desconto de 8%')
-        print('Codigo 2 = À vista com cartão, desconto de 4%')
+        print('Codigo 2 = À vista no cartão, desconto de 4%')
         print('Codigo 3 = Em 2x sem juros')
         print('Codigo 4 = Em 4x com juros de 8%')
         print('')
