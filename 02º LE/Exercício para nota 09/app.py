@@ -10,6 +10,8 @@ print('Maquininha de cartão')
 print('')
 
 # entrada de dados
+
+
 while True:
     try:
         valor_da_compra = input('Digite o primeiro valor: ')
@@ -43,3 +45,24 @@ while True:
             print('Opção inválida, escolha os codigos somente entre 1 e 4')
         break
 
+
+#processamento
+if(codigo == 1):
+    total_a_pagar = valor_da_compra - (valor_da_compra/12.5)
+elif(codigo == 2):
+    total_a_pagar = valor_da_compra - (valor_da_compra/25)
+else:
+    if(codigo == 3):
+        total_a_pagar = valor_da_compra
+
+        valor_das_parcelas = total_a_pagar/2
+
+    elif(codigo == 4):
+        total_a_pagar = valor_da_compra + (valor_da_compra/12.5)
+
+        valor_das_parcelas = total_a_pagar/4
+
+    print('O valor das parcelas será R$',valor_das_parcelas)
+
+
+print('O total a pagar será R$',total_a_pagar)
