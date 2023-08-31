@@ -6,7 +6,7 @@
 #***************************************************************************************************************************************
 # Título
 print('')
-print('Maquininha de cartão')
+print('Maquininha de pagamentos')
 print('')
 
 # entrada de dados
@@ -42,8 +42,10 @@ while True:
         continue
     else:
         if(codigo < 1 or codigo > 4):
+            print('')
             print('Opção inválida, escolha os codigos somente entre 1 e 4')
-        break
+        else:
+            break
 
 
 #processamento
