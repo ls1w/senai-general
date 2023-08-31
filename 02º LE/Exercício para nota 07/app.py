@@ -60,7 +60,9 @@ elif(valor1 < valor3 and valor3 < valor2):
     print('A ordem crescente dos valores é',valor1,',',valor3,'e',valor2)
 elif(valor2 < valor3 and valor3 < valor1):
     print('A ordem crescente dos valores é',valor2,',',valor3,'e',valor1)
-else:
+elif(valor3 < valor1 and valor1 < valor2):
     print('A ordem crescente dos valores é',valor3,',',valor1,'e',valor2)
+else:
+    print('Por favor, não coloque valores iguais')
 
 print('')
