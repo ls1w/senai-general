@@ -2,7 +2,4 @@ while
 
 for
 
-
-
-
 for each --> Só para trabalhar com objetos ou array
