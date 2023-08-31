@@ -63,7 +63,8 @@ else:
         total_a_pagar = valor_da_compra + (valor_da_compra/12.5)
 
         valor_das_parcelas = total_a_pagar/4
-
+    
+    # Saída de dados
     print('O valor das parcelas será R$',valor_das_parcelas)
 
 

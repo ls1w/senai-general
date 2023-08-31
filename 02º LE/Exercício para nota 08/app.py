@@ -70,6 +70,8 @@ elif(imc >= 35 and imc < 40):
     print('A pessoa de nome',nome,'tem obesidade grau II')
 elif(imc >= 40):
     print('A pessoa de nome',nome,'tem obesidade grau III')
+else:
+    print('ERRO')
 
 
 print('')
