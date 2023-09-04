@@ -13,5 +13,5 @@ contador = 15
 
 while(contador <= 200):
     quadrado = contador ** 2
-    print(contador,'^ 2 =',quadrado)
+    print(str(contador)+'² =',quadrado)
     contador = contador + 1
