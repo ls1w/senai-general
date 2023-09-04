@@ -9,7 +9,7 @@ print('')
 print('Calculando fatoriais')
 print('')
 
-fatorial = 1
+resultado_fatorial = 1
 try:
     contador = int(input('Digite o número fatorial a ser calculado: '))
 except ValueError:
@@ -19,8 +19,7 @@ else:
         print('Digite somente valores positívos')
     else:
         while(contador > 0):
-            fatorial = contador * fatorial
+            resultado_fatorial = contador * resultado_fatorial
             print(contador,'X')
             contador = contador - 1
-
-print('=',fatorial)
+        print('=',resultado_fatorial)
