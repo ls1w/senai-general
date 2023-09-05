@@ -68,13 +68,17 @@ while True:
             break
 
 contador_while = tabuada_inicial
-contado_if = numero_inicial
+contador_if = numero_inicial
 while(contador_while <= tabuada_final):
     if(contador_if <= numero_final):
         print('conta da mesma tabuada')
         resultado = contador_if * contador_while
-        print(contador_if,'X',contador_while,'=',resultado)
+        print(contador_while,'X',contador_if,'=',resultado)
+        contador_if = contador_if + 1
     else:
+        print('')
         print('próxima tabuada')
         contador_while = contador_while + 1
         contador_if = numero_inicial
+
+print('Fim, nenhuma tabuada a mais')
