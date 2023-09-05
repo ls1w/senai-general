@@ -66,6 +66,7 @@ while True:
 contador_while = tabuada_inicial
 contador_if = numero_inicial
 
+print('')
 print('Primeira tabuada')
 while(contador_while <= tabuada_final):
     if(contador_if <= numero_final):
