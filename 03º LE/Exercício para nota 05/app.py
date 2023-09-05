@@ -12,64 +12,54 @@ print('')
 while True:
     try:
         tabuada_inicial = int(input('Digite a tabuada inicial (entre 2 e 100): '))
-        print('')
-    except ValueError:
-        print('ERRO: Dgite somente valores numéricos inteiros')
-        continue
-    else:
         if(tabuada_inicial < 2 or tabuada_inicial > 100):
-            print('ERRO: Os valores tem que ser entre 2 e 100')
-            continue
+            print('')
+            print('ERRO: Os valores tem que estar entre 2 e 100')
         else:
             break
+    except ValueError:
+        print('')
+        print('ERRO: Digite somente valores numéricos inteiros')
+        continue
 
 while True:
     try:
         tabuada_final = int(input('Digite a tabuada final (entre 2 e 100): '))
-        print('')
-    except ValueError:
-        print('ERRO: Dgite somente valores numéricos inteiros')
-        continue
-    else:
-        if(tabuada_final < 2 or tabuada_final > 100):
-            print('ERRO: Os valores tem que ser entre 2 e 100')
-            continue
-        elif(tabuada_final < tabuada_inicial):
-            print('ERRO: O valor final da tabuada tem que ser maior ou igual ao valor inicial')
-            continue
+        if(tabuada_final < 2 or tabuada_final > 100 or tabuada_final < tabuada_inicial):
+            print('')
+            print('ERRO: Os valores tem que estar entre 2 e 100 e ser maior que',tabuada_inicial)
         else:
             break
+    except ValueError:
+        print('')
+        print('ERRO: Digite somente valores numéricos inteiros')
+        continue
 
 while True:
     try:
         numero_inicial = int(input('Digite o valor inicial na tabuada (entre 1 e 50): '))
-        print('')
-    except ValueError:
-        print('ERRO: Dgite somente valores numéricos inteiros')
-        continue
-    else:
         if(numero_inicial < 1 or numero_inicial > 50):
-            print('ERRO: Os valores tem que ser entre 1 e 50')
-            continue
+            print('')
+            print('ERRO: Os valores tem que estar entre 1 e 50')
         else:
             break
+    except ValueError:
+        print('')
+        print('ERRO: Digite somente valores numéricos inteiros')
+        continue
 
 while True:
     try:
         numero_final = int(input('Digite o valor final na tabuada (entre 1 e 50): '))
-        print('')
-    except ValueError:
-        print('ERRO: Dgite somente valores numéricos inteiros')
-        continue
-    else:
-        if(numero_final < 1 or numero_final > 50):
-            print('ERRO: Os valores tem que ser entre 1 e 50')
-            continue
-        elif(numero_final < numero_inicial):
-            print('ERRO: O valor final tem que ser maior ou igual ao valor inicial')
-            continue
+        if(numero_final < 1 or numero_final > 50 or numero_final < numero_inicial):
+            print('')
+            print('ERRO: Os valores tem que estar entre 1 e 50 e ser maior que',numero_inicial)
         else:
             break
+    except ValueError:
+        print('')
+        print('ERRO: Digite somente valores numéricos inteiros')
+        continue
 
 
 
