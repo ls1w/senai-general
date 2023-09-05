@@ -70,9 +70,7 @@ while True:
 contador_while = tabuada_inicial
 contado_if = numero_inicial
 while(contador_while <= tabuada_final):
-    resultado = tabuada_inicial * contador_while
-    print(contador_if,'X',contador_while,'=',resultado)
-    if(contador_if < numero_final):
+    if(contador_if <= numero_final):
         print('conta da mesma tabuada')
         resultado = contador_if * contador_while
         print(contador_if,'X',contador_while,'=',resultado)
