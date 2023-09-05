@@ -12,6 +12,7 @@ print('')
 while True:
     try:
         tabuada_inicial = int(input('Digite a tabuada inicial (entre 2 e 100): '))
+        print('')
     except ValueError:
         print('ERRO: Dgite somente valores numéricos inteiros')
         continue
@@ -25,6 +26,7 @@ while True:
 while True:
     try:
         tabuada_final = int(input('Digite a tabuada final (entre 2 e 100): '))
+        print('')
     except ValueError:
         print('ERRO: Dgite somente valores numéricos inteiros')
         continue
@@ -41,6 +43,7 @@ while True:
 while True:
     try:
         numero_inicial = int(input('Digite o valor inicial na tabuada (entre 1 e 50): '))
+        print('')
     except ValueError:
         print('ERRO: Dgite somente valores numéricos inteiros')
         continue
@@ -54,6 +57,7 @@ while True:
 while True:
     try:
         numero_final = int(input('Digite o valor final na tabuada (entre 1 e 50): '))
+        print('')
     except ValueError:
         print('ERRO: Dgite somente valores numéricos inteiros')
         continue
@@ -67,9 +71,11 @@ while True:
         else:
             break
 
+
+
 contador_while = tabuada_inicial
 contador_if = numero_inicial
-print('')
+
 print('Primeira tabuada')
 while(contador_while <= tabuada_final):
     if(contador_if <= numero_final):
