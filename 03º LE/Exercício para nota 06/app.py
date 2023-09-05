@@ -2,7 +2,7 @@
 # Objetivo: Criar um sistema que gerencie números pares e impares conforme os requisitos abaixo: O sistema deverá solicitar as seguintes entradas:  •Número Inicial;  •Número Final;  Requisitos do Sistema  •O número inicial deverá ser limitado a entrada de valores entre 0 até 500;  •O número final deverá ser limitado a entrada de valores entre 100 até 1000;  •O usuário deve obrigatoriamente digitar números nas duas entradas, assim não podem ficar vazias;  •Se o usuário digitar um número inicial MAIOR do que o final o sistema deve impedir o cálculo e apresentar uma mensagem de erro para o usuário;  •O sistema também deve impedir que o usuário digite dois números iguais em ambas as entradas;  •Ao final de cada lista a quantidade de números pares e impares calculados deverá ser exibida;  •O sistema deverá apresentar uma sequência de números pares e outra sequência de números ímpares;
 # Data: 05/09/2023
 # Autor: Lucas
-# Versão: 1.0
+# Versão: 1.5
 #***************************************************************************************************************************************
 # Título
 print('')
@@ -13,34 +13,45 @@ print('')
 while True:
     try:
         numero_inicial = int(input('Digite o número inicial (entre 0 e 500): '))
-        print('')
-    except ValueError:
-        print('ERRO: Dgite somente valores numéricos inteiros')
-        continue
-    else:
         if(numero_inicial < 0 or numero_inicial > 500):
+            print('')
             print('ERRO: O número tem que ser entre 0 e 500')
-            continue
         else:
             break
+    except ValueError:
+        print('')
+        print('ERRO: Digite somente valores numéricos inteiros')
+        continue
+    # else:
+    #     if(numero_inicial < 0 or numero_inicial > 500):
+    #         print('ERRO: O número tem que ser entre 0 e 500')
+    #         continue
+    #     else:
+    #         break
 
 
 while True:
     try:
         numero_final = int(input('Digite o número final (entre 100 e 1000): '))
         print('')
-    except ValueError:
-        print('ERRO: Dgite somente valores numéricos inteiros')
-        continue
-    else:
-        if(numero_final < 100 or numero_final > 1000):
-            print('ERRO: O valor tem que ser entre 100 e 1000')
-            continue
-        elif(numero_final <= numero_inicial):
-            print('ERRO: O número final tem que ser maior do que o número inicial:',numero_inicial)
-            continue
+        if(numero_final < 100 or numero_final > 1000 or numero_final <= numero_inicial):
+            print('')
+            print('ERRO: O valor tem que ser entre 100 e 1000, e maior que',numero_inicial)
         else:
             break
+    except ValueError:
+        print('')
+        print('ERRO: Dgite somente valores numéricos inteiros')
+        continue
+    # else:
+    #     if(numero_final < 100 or numero_final > 1000):
+    #         print('ERRO: O valor tem que ser entre 100 e 1000')
+    #         continue
+    #     elif(numero_final <= numero_inicial):
+    #         print('ERRO: O número final tem que ser maior do que o número inicial:',numero_inicial)
+    #         continue
+    #     else:
+    #         break
 
 contador_pares = numero_inicial
 qtde_de_pares = 0
