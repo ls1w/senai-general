@@ -67,7 +67,16 @@ while True:
         else:
             break
 
-contador = numero_inicial
-while(contador <= numero_final):
-    resultado = tabuada_inicial * contador
-    print(tabuada_inicial,'X',contador,'=',resultado)
+contador_while = tabuada_inicial
+contado_if = numero_inicial
+while(contador_while <= tabuada_final):
+    resultado = tabuada_inicial * contador_while
+    print(contador_if,'X',contador_while,'=',resultado)
+    if(contador_if < numero_final):
+        print('conta da mesma tabuada')
+        resultado = contador_if * contador_while
+        print(contador_if,'X',contador_while,'=',resultado)
+    else:
+        print('próxima tabuada')
+        contador_while = contador_while + 1
+        contador_if = numero_inicial
