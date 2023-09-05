@@ -9,22 +9,22 @@ print('')
 print('Calculando os impares e pares')
 print('')
 
-
-while True:
+status = True
+while(status):
     try:
         numero_inicial = int(input('Digite o número inicial (entre 0 e 500): '))
         if(numero_inicial < 0 or numero_inicial > 500):
             print('')
             print('ERRO: O número tem que estar entre 0 e 500')
         else:
-            break
+            status = False
     except ValueError:
         print('')
         print('ERRO: Digite somente valores numéricos inteiros')
         continue
 
-
-while True:
+status = True
+while(status):
     try:
         numero_final = int(input('Digite o número final (entre 100 e 1000): '))
         print('')
@@ -32,7 +32,7 @@ while True:
             print('')
             print('ERRO: O valor tem que estar entre 100 e 1000, e ser maior que',numero_inicial)
         else:
-            break
+            status = False
     except ValueError:
         print('')
         print('ERRO: Dgite somente valores numéricos inteiros')
