@@ -18,7 +18,7 @@ while True:
         continue
     else:
         if(tabuada_inicial < 2 or tabuada_inicial > 100):
-            print('Os valores tem que ser entre 2 e 100')
+            print('ERRO: Os valores tem que ser entre 2 e 100')
             continue
         else:
             break
@@ -32,10 +32,10 @@ while True:
         continue
     else:
         if(tabuada_final < 2 or tabuada_final > 100):
-            print('Os valores tem que ser entre 2 e 100')
+            print('ERRO: Os valores tem que ser entre 2 e 100')
             continue
         elif(tabuada_final < tabuada_inicial):
-            print('O valor final da tabuada tem que ser maior ou igual ao valor inicial')
+            print('ERRO: O valor final da tabuada tem que ser maior ou igual ao valor inicial')
             continue
         else:
             break
@@ -49,7 +49,7 @@ while True:
         continue
     else:
         if(numero_inicial < 1 or numero_inicial > 50):
-            print('Os valores tem que ser entre 1 e 50')
+            print('ERRO: Os valores tem que ser entre 1 e 50')
             continue
         else:
             break
@@ -63,10 +63,10 @@ while True:
         continue
     else:
         if(numero_final < 1 or numero_final > 50):
-            print('Os valores tem que ser entre 1 e 50')
+            print('ERRO: Os valores tem que ser entre 1 e 50')
             continue
         elif(numero_final < numero_inicial):
-            print('O valor final tem que ser maior ou igual ao valor inicial')
+            print('ERRO: O valor final tem que ser maior ou igual ao valor inicial')
             continue
         else:
             break
