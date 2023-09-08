@@ -78,15 +78,5 @@ while(contador_tabuada <= tabuada_final):
         contador_numero += 1
     contador_tabuada += 1
 
-
-    # if(contador_if <= numero_final):
-    #     resultado = contador_numero * contador_tabuada
-    #     print(contador_tabuada,'X',contador_numero,'=',resultado)
-    #     contador_numero = contador_numero + 1
-    # else:
-    #     print('')
-    #     print('Procurando próxima tabuada')
-    #     contador_tabuada = contador_tabuada + 1
-    #     contador_numero = numero_inicial
-
-print('Fim, nenhuma tabuada a mais')
+print('')
+print('Fim, nenhuma tabuada a mais.')
