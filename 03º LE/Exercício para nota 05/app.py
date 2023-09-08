@@ -2,7 +2,7 @@
 # Objetivo: Criar um sistema para gerenciar o cálculo de uma tabuada, conforme requisitos abaixo:  O sistema deverá solicitar as seguintes entradas:  •A tabuada inicial e tabuada final a ser calculada; •O número inicial e final do contador da tabuada;  Requisitos do Sistema  •A entrada da tabuada deverá ser entre 2 e 100, não sendo permitido outros valores;  •Nenhuma entrada de dados deverá ficar sem preenchimento;  •O valor até onde será calculada a tabuada deverá ser entre 1 e 50
 # Data: 04/09/2023
 # Autor: Lucas
-# Versão: 1.5
+# Versão: 2.0
 #***************************************************************************************************************************************
 # Título
 print('')
@@ -67,20 +67,26 @@ while(status):
 
 
 
-contador_while = tabuada_inicial
-contador_if = numero_inicial
+contador_tabuada = tabuada_inicial
+while(contador_tabuada <= tabuada_final):
+    contador_numero = numero_inicial
+    print('')
+    print('Tabuada do',contador_tabuada)
+    while(contador_numero <= numero_final):
+        resultado = contador_numero * contador_tabuada
+        print(contador_tabuada,'X',contador_numero,'=',resultado)
+        contador_numero += 1
+    contador_tabuada += 1
 
-print('')
-print('Primeira tabuada')
-while(contador_while <= tabuada_final):
-    if(contador_if <= numero_final):
-        resultado = contador_if * contador_while
-        print(contador_while,'X',contador_if,'=',resultado)
-        contador_if = contador_if + 1
-    else:
-        print('')
-        print('Procurando próxima tabuada')
-        contador_while = contador_while + 1
-        contador_if = numero_inicial
+
+    # if(contador_if <= numero_final):
+    #     resultado = contador_numero * contador_tabuada
+    #     print(contador_tabuada,'X',contador_numero,'=',resultado)
+    #     contador_numero = contador_numero + 1
+    # else:
+    #     print('')
+    #     print('Procurando próxima tabuada')
+    #     contador_tabuada = contador_tabuada + 1
+    #     contador_numero = numero_inicial
 
 print('Fim, nenhuma tabuada a mais')
