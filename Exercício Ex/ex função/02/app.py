@@ -5,28 +5,18 @@
 # Versão: 1.0
 # *********************************************************************************************************************
 
+import sys
+# sys.path.insert() permite acrescentar na memória do projeto um diretório a ser utilizado
+# Obs: O ./ significa o diretório atual do projeto
+sys.path.insert(1,'./modulo')
 
-# FUNÇÃO PARA CALCULAR O FÁTORIAL DE UM NÚMERO 
-def calcular_fatorial(numero_do_fatorial):
-    
-    # Recebe o argumento encaminhado da função
-    # variável locar =  argumento
-    numero_fatorial  =  numero_do_fatorial
-    
-    # Variáveis locais para o processamento
-    contador = 1
-    fatorial = 1
-    while(contador <= numero_fatorial):
-        fatorial = fatorial * contador
-        contador += 1
-    
-    return fatorial # Retorna o valor calculado do fatorial
+import fatorial
 
 # ENTRADA DE DADOS
 numero = int(input('Digite um número para calcular fatorial: '))
 
 # PROCESSAMENTO
-resultado = calcular_fatorial(numero)
+resultado = fatorial.calcular_fatorial(numero)
 
 # SAÍDA DO RESULTADO
 print(numero,'! =',resultado)
