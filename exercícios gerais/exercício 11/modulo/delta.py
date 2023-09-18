@@ -8,8 +8,9 @@ def calcDelta(valorDeA,valorDeB,valorDeC):
         valorA = 1
     valorDelta = (valorB ** 2) - (4*valorA*valorC)
 
+    print('')
+    print('Delta =',valorDelta)
     if(valorDelta < 0):
-        print('')
         print('Não há raízes reais para delta negatívo.')
         sys.exit()
     print(valorDelta)
