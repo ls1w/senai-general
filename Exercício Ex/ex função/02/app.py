@@ -1,7 +1,6 @@
 import sys
-sys.path.insert(1, './modulo')
 
-import tabuada
+import modulo.tabuada as tabuada
 
 status = False
 while(not(status)):
