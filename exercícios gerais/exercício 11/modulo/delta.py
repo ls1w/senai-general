@@ -15,3 +15,9 @@ def calcDelta(valorDeA,valorDeB,valorDeC):
         sys.exit()
     print(valorDelta)
     return valorDelta
+
+if __name__ == "__main__":
+    a = 2
+    b = 3
+    c = 5
+    print(calcDelta(a,b,c))
