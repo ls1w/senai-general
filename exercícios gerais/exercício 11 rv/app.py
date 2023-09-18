@@ -1,7 +1,7 @@
 '''
 Auto: Tux
 Objetivo: Calcular as duas raízes da eq. do 2º grau
-          chamando o arquivo equação_segundo_grau.py
+        chamando o arquivo equação_segundo_grau.py
 Data: 14/09/2023 
 Versão: 1.0
 '''
