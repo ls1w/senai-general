@@ -1,6 +1,6 @@
 import sys
 from math import sqrt
-import delta
+import modulo.delta as delta
 
 def calc_raizes(valorDeA,valorDeB,valorDeC):
     valorA = valorDeA
@@ -8,10 +8,6 @@ def calc_raizes(valorDeA,valorDeB,valorDeC):
     valorC = valorDeC
     valorDelta = delta.calcDelta(valorA,valorB,valorC)
 
-    if(valorDelta < 0):
-        print('')
-        sys.exit
-        
     x1 = (-valorB + sqrt(valorDelta))/(2*valorA)
 
     x2 = (-valorB - sqrt(valorDelta))/(2*valorA)
