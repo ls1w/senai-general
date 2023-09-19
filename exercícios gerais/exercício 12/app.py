@@ -11,6 +11,10 @@ from modulo.equacao_segundo_grau import calcular_raizes
 system('clear')
 numeros = [float(var) for var in input("Digite 'a', 'b' e 'c' separados por vírgula sem espaço('a,b,c'): ").split(',')]
 
-x1, x2 = calcular_raizes(numeros[0], numeros[1], numeros[2])
+a = numeros[0]
+b = numeros[1]
+c = numeros[2]
+
+x1, x2 = calcular_raizes(a, b, c)
 print("O valor de x1 = ", x1)
 print("O valor de x2 = ", x2)
