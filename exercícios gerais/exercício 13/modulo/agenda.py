@@ -2,9 +2,8 @@
 # Objetivo: Criar as funções necessárias para uma agenda
 # Data: 19/09/2023
 # Autor: ls1w
-# Versão: 2.2
+# Versão: 2.3
 # *****************************************************************************************
-
 from os import system
 import sys
 
@@ -33,15 +32,12 @@ def cadastrarUsuario(contatos):
         next = input('Digite[y/N]: ').lower()
 
         if( next != 'y'):
-            status = False
+            status = True
 
     return contato
 
-
-
-
 def listarTodosOsUsuarios(contatos):
-    status = False
+    finished_ok = False
     system('clear')
     contato = contatos
 
@@ -51,20 +47,17 @@ def listarTodosOsUsuarios(contatos):
         for i in contato:
             print(i)
             print('|  Telefone:',contato[i]['telefone'],'- Email:',contato[i]['email'])
-        status = True
+        finished_ok = True
     else:
         print('Lista vazia')
-        status = True
+        finished_ok = True
 
     print('')
     input('Digite qualquer tecla para voltar ao menu')
-    return status
-
-
-
+    return finished_ok
 
 def buscarUsuario(contatos):
-    status = False
+    finished_ok = False
     system('clear')
     contato = contatos
 
@@ -74,7 +67,7 @@ def buscarUsuario(contatos):
     if contato == {}:
         print('')
         print('Nenhum usuário na agenda.')
-        status = False
+        finished_ok = False
     else:
         procurar = input('Digite o nome do contato que deseja buscar: ').lower()
 
@@ -83,23 +76,21 @@ def buscarUsuario(contatos):
                 print('')
                 print(procurar)
                 print('| Telefone: ',contato[procurar]['telefone'],' - E-mail: ',contato[procurar]['email'])
-                status = True
+                finished_ok = True
 
-        if not(status):
+        if not(finished_ok):
             print('')
             print('Nenhum usuário encontrado com o nome',procurar,'encontrado.')
+            finished_ok = True
         
     print('')
     input('Digite qualquer tecla para voltar ao menu')
-    return status
-
-
-
+    return finished_ok
 
 def excluirUsuario(contatos):
     system('clear')
     contato = contatos
-    status = False
+    finished_ok = False
 
     print('Excluindo contatos')
     print('')
@@ -110,7 +101,7 @@ def excluirUsuario(contatos):
 
         for nomeContato in contato:
             if procurar == nomeContato:
-                status = True
+                finished_ok = True
                 print('')
                 print(procurar)
                 print('')
@@ -125,16 +116,15 @@ def excluirUsuario(contatos):
                 else:
                     print('Operação de exclusão cancelada.')
 
-        if not(status):
+        if not(finished_ok):
             print('')
             print('Nenhum usuário encontrado com o nome',procurar,'encontrado.')
+            finished_ok = True
+
     print('')
     input('Digite qualquer tecla para voltar ao menu')
     
     return contato
-
-
-
 
 def menu():
     status = True
@@ -174,11 +164,7 @@ def menu():
             print('ERRO: Reposta inválida, por favor, digite somente o número desejado da operação.')
             print('')
             input('Digite qualquer coisa para voltar ao menu.')
-
-
-
-
+    return not(status)
 
 if __name__ == "__main__":
     menu()
-
