@@ -1,29 +1,47 @@
+# *****************************************************************************************
+# Objetivo: Criar as funções necessárias para uma agenda
+# Data: 19/09/2023
+# Autor: ls1w
+# Versão: 2.0
+# *****************************************************************************************
+
 from os import system
-import sys
+from sys import exit as sysex
 
 def cadastrarUsuario(contatos):
-    system('clear')
+    status = True
 
-    contato = contatos
+    while status:
+        system('clear')
 
-    print('Cadastrar usuário')
-    print('')
+        contato = contatos
 
-    nome = input('Digite o nome do novo contato: ').lower()
-    telefone = input('Digite o telefone do novo contato: ')
-    email = input('Digite o email do novo contato: ')
+        print('Cadastrar usuário')
+        print('')
 
-    contato[nome] = {'telefone':telefone,'email':email}
+        nome = input('Digite o nome do novo contato: ').lower()
+        telefone = input('Digite o telefone do novo contato: ')
+        email = input('Digite o email do novo contato: ')
 
-    print('')
-    print('Usuário cadastrado com sucesso')
-    input('pressione qualquer tecla para voltar ao menu.')
+        contato[nome] = {'telefone':telefone,'email':email}
+
+        system('clear')
+        print('Usuário cadastrado com sucesso')
+        print('')
+
+        print('Deseja adicionar mais um usuário?')
+        next = input('Digite[y/N]: ').lower()
+
+        if( next != 'y'):
+            status = False
 
     return contato
 
 
+
+
 def listarTodosOsUsuarios(contatos):
-    work = False
+    status = False
     system('clear')
     contato = contatos
 
@@ -35,13 +53,18 @@ def listarTodosOsUsuarios(contatos):
 
     print('')
     input('Digite qualquer tecla para voltar ao menu')
-    work = True
-    return work
+
+    status = True
+    return status
+
+
+
 
 def buscarUsuario(contatos):
-    work = False
+    status = False
     system('clear')
     contato = contatos
+
     print('Buscando Contato')
     print('')
     procurar = input('Digite o nome do contato que deseja buscar: ').lower()
@@ -51,8 +74,38 @@ def buscarUsuario(contatos):
     print('| Telefone: ',contato[procurar]['telefone'],' - E-mail: ',contato[procurar]['email'])
     print('')
     input('Digite qualquer tecla para voltar ao menu')
-    work = True
-    return work
+
+    status = True
+    return status
+
+
+
+
+def excluirUsuario(contatos):
+    system('clear')
+    contato = contatos
+
+    print('Excluindo contatos')
+    print('')
+    procurar = input('Digite o nome do contato que deseja excluir: ')
+
+    print('')
+    print(procurar)
+    print('')
+    next = input('Tem certeza que deseja EXCLUIR o contato a cima?[y/N]')
+    if next == 'y':
+        next = input('Tem certeza mesmo que deseja EXCLUIR?[y/N]').lower()
+        if next == 'y':
+            contato.pop(procurar)
+    
+    print('Usuário',procurar,'excluido com sucesso.')
+    print('')
+    input('Digite qualquer tecla para voltar ao menu')
+    
+    return contato
+
+
+
 
 
 
@@ -78,7 +131,7 @@ if __name__ == "__main__":
             print('Saindo da agenta')
             print('')
             status = False
-            sys.exit()
+            sysex()
 
         elif opcao == '3':
             lastActionWork = listarTodosOsUsuarios(contato)
