@@ -2,7 +2,7 @@
 # Objetivo: Criar as funções necessárias para uma agenda
 # Data: 19/09/2023
 # Autor: ls1w
-# Versão: 2.1
+# Versão: 2.2
 # *****************************************************************************************
 
 from os import system
@@ -47,14 +47,17 @@ def listarTodosOsUsuarios(contatos):
 
     print('Listando todos os usuários')
     print('')
-    for i in contato:
-        print(i)
-        print('|  Telefone:',contato[i]['telefone'],'- Email:',contato[i]['email'])
+    if contato != {}:
+        for i in contato:
+            print(i)
+            print('|  Telefone:',contato[i]['telefone'],'- Email:',contato[i]['email'])
+        status = True
+    else:
+        print('Lista vazia')
+        status = True
 
     print('')
     input('Digite qualquer tecla para voltar ao menu')
-
-    status = True
     return status
 
 
@@ -67,15 +70,27 @@ def buscarUsuario(contatos):
 
     print('Buscando Contato')
     print('')
-    procurar = input('Digite o nome do contato que deseja buscar: ').lower()
 
-    print('')
-    print(procurar)
-    print('| Telefone: ',contato[procurar]['telefone'],' - E-mail: ',contato[procurar]['email'])
+    if contato == {}:
+        print('')
+        print('Nenhum usuário na agenda.')
+        status = False
+    else:
+        procurar = input('Digite o nome do contato que deseja buscar: ').lower()
+
+        for i in contato:
+            if procurar == i:
+                print('')
+                print(procurar)
+                print('| Telefone: ',contato[procurar]['telefone'],' - E-mail: ',contato[procurar]['email'])
+                status = True
+
+        if not(status):
+            print('')
+            print('Nenhum usuário encontrado com o nome',procurar,'encontrado.')
+        
     print('')
     input('Digite qualquer tecla para voltar ao menu')
-
-    status = True
     return status
 
 
@@ -84,24 +99,35 @@ def buscarUsuario(contatos):
 def excluirUsuario(contatos):
     system('clear')
     contato = contatos
+    status = False
 
     print('Excluindo contatos')
     print('')
-    procurar = input('Digite o nome do contato que deseja excluir: ')
-
-    print('')
-    print(procurar)
-    print('')
-    next = input('Tem certeza que deseja EXCLUIR o contato a cima?[y/N]')
-    if next == 'y':
-        next = input('Tem certeza mesmo que deseja EXCLUIR?[y/N]').lower()
-        if next == 'y':
-            contato.pop(procurar)
-            print('Usuário',procurar,'excluido com sucesso.')
-        else:
-            print('Operação de exclusão cancelada.')
+    if contato == {}:
+        print('Lista vazia')
     else:
-        print('Operação de exclusão cancelada.')
+        procurar = input('Digite o nome do contato que deseja excluir: ')
+
+        for nomeContato in contato:
+            if procurar == nomeContato:
+                status = True
+                print('')
+                print(procurar)
+                print('')
+                next = input('Tem certeza que deseja EXCLUIR o contato a cima?[y/N]')
+                if next == 'y':
+                    next = input('Tem certeza mesmo que deseja EXCLUIR?[y/N]').lower()
+                    if next == 'y':
+                        contato.pop(procurar)
+                        print('Usuário',procurar,'excluido com sucesso.')
+                    else:
+                        print('Operação de exclusão cancelada.')
+                else:
+                    print('Operação de exclusão cancelada.')
+
+        if not(status):
+            print('')
+            print('Nenhum usuário encontrado com o nome',procurar,'encontrado.')
     print('')
     input('Digite qualquer tecla para voltar ao menu')
     

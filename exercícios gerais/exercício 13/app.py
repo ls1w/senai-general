@@ -2,7 +2,7 @@
 # Objetivo: Criar uma agenda
 # Data: 20/09/2023
 # Autor: ls1w
-# Versão: 2.1
+# Versão: 2.2
 # *****************************************************************************************
 import modulo.agenda as agenda
 
