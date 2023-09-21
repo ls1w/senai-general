@@ -2,11 +2,11 @@
 # Objetivo: Criar as funções necessárias para uma agenda
 # Data: 19/09/2023
 # Autor: ls1w
-# Versão: 2.0
+# Versão: 2.1
 # *****************************************************************************************
 
 from os import system
-from sys import exit as sysex
+import sys
 
 def cadastrarUsuario(contatos):
     status = True
@@ -49,7 +49,7 @@ def listarTodosOsUsuarios(contatos):
     print('')
     for i in contato:
         print(i)
-        print('|  Telefone:',contato[i]['telefone'],', Email:',contato[i]['email'])
+        print('|  Telefone:',contato[i]['telefone'],'- Email:',contato[i]['email'])
 
     print('')
     input('Digite qualquer tecla para voltar ao menu')
@@ -97,8 +97,11 @@ def excluirUsuario(contatos):
         next = input('Tem certeza mesmo que deseja EXCLUIR?[y/N]').lower()
         if next == 'y':
             contato.pop(procurar)
-    
-    print('Usuário',procurar,'excluido com sucesso.')
+            print('Usuário',procurar,'excluido com sucesso.')
+        else:
+            print('Operação de exclusão cancelada.')
+    else:
+        print('Operação de exclusão cancelada.')
     print('')
     input('Digite qualquer tecla para voltar ao menu')
     
@@ -107,38 +110,49 @@ def excluirUsuario(contatos):
 
 
 
-
-
-
-if __name__ == "__main__":
-    contato = {}
-
+def menu():
     status = True
+    agenda = {}
     while(status):
         system('clear')
         print('Agenda')
 
         print('')
-        print('1 Cadastrar usuário')
-        print('2 Buscar Usuário')
-        print('3 Listar todos os usuários')
-        print('4 Sair')
+        print('1 Cadastrar usuário.')
+        print('2 Buscar Usuário.')
+        print('3 Listar todos os usuários.')
+        print('4 Excluir um usuário.')
+        print('5 Sair.')
         print('')
 
-        opcao = input('Escolha uma opção a cima(1/2/3/4): ')
-        if opcao == '4':
+        opcao = input('Escolha uma opção a cima [1/2/3/4/5]: ')
+        if opcao == '5':
             system('clear')
             print('Saindo da agenta')
             print('')
             status = False
-            sysex()
+            sys.exit()
+
+        elif opcao == '4':
+            agenda = excluirUsuario(agenda)
 
         elif opcao == '3':
-            lastActionWork = listarTodosOsUsuarios(contato)
+            lastActionWork = listarTodosOsUsuarios(agenda)
         elif opcao == '2':
-            buscarUsuario(contato)
+            lastActionWork = buscarUsuario(agenda)
         elif opcao == '1':
-            contato = cadastrarUsuario(contato)
+            agenda = cadastrarUsuario(agenda)
+
         else:
+            system('clear')
             print('ERRO: Reposta inválida, por favor, digite somente o número desejado da operação.')
+            print('')
+            input('Digite qualquer coisa para voltar ao menu.')
+
+
+
+
+
+if __name__ == "__main__":
+    menu()
 
